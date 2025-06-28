@@ -61,15 +61,12 @@
 // }
 
 // const sampleArr = [1,2,3,4,5,6];
-
 // const newlyArr = sampleArr.filter(x => x%2 === 0);
 // console.log(newlyArr);
-
 // const newly = evenConvert([1,2,3,4,6,8,9]);
 // console.log(newly);
 
 // Question 16: Create an image gallery using dynamically generated elements
-
 // function createImageElement(src){
 //     const imgElement = document.createElement('img');
 //     imgElement.src = src;
@@ -82,32 +79,78 @@
 // );
 
 // Question 17: Given a string, reverse all the words which have odd length. The eve length words are not changed.
-
 // reverseOdd("Apple") => elppA
 // reverseOdd("One Two Four") => rouF owT enO
+// function reverseOdd(string){
+//     function reverseWord(word){
+//         return word.split("").reverse().join("");  
+//     }
+//     const wordsArr = string.split(" ");
+//         // wordsArr.forEach(x => {
+//         //      if (x.length %2 ==1) reverseWord(x);
+//         // }
+//         // here, it is not useful to use 'forEach', because forEach won't change any elements of the array.
+//         // In order to change the elements of the array, i need to use the map for this thing ( with a function that has condition and it will change each elements of the array, based on that condtion).
+//         const newArray = wordsArr.map(x =>{
+//             if(x.length %2 === 1) return reverseWord(x);
+//             else return x;
+//         }
+//         );
+//     return newArray.join(" ");
+// }
+//     const string2 = reverseOdd("Hi I ame Addy");
+//     console.log(string2);
 
-function reverseOdd(string){
-    function reverseWord(word){
-        return word.split("").reverse().join("");  
-    }
-    const wordsArr = string.split(" ");
-        // wordsArr.forEach(x => {
-        //      if (x.length %2 ==1) reverseWord(x);
-        // }
+// Question 18: Use map() to double all the elements
+// const arr = [1,2,3];
+// doubleArr = arr.map(x => x*2);
+// console.log(doubleArr);
 
-        // here, it is not useful to use 'forEach', because forEach won't change any elements of the array.
-        // In order to change the elements of the array, i need to use the map for this thing ( with a function that has condition and it will change each elements of the array, based on that condtion).
+// function doubleArr(arr){
+//     return arr.map(x => x*2);
+// }
+// const newArray = doubleArr([1,2,3,4,5]);
+// console.log(newArray);
 
-        const newArray = wordsArr.map(x =>{
-            if(x.length %2 === 1) return reverseWord(x);
-            else return x;
-        }
-        );
-    return newArray.join(" ");
-}
+// Question 19: Find the largest element in an array using the reduce() method
+// function findLargeElement(arr){
+//     return arr.reduce((acc, ele)=>{
+//         if(acc < ele) acc = ele;
+//         return acc;
+//     },0);
+// }
+// const maxVal = findLargeElement([1,3,4,10,10,6,8]);
+// console.log(maxVal);
 
-    const string2 = reverseOdd("Hi I ame Addy");
-    console.log(string2);
+// Question 20: Remove all occurences of a specific element from an array
+// function removeElementArray(arr, target){
+//     return arr.filter(x => x!==target);
+// }
+// const newArray = removeElementArray([1,2,2,3,4,2,5], 2);
+// console.log(newArray);
+
+// Question 21: Create a function that displays the current date and time in a speciific format
+
+// function getCurrentDateAndTime(){
+//     let currentDate = new Date();
+//     return currentDate.toLocaleString();
+// }
+// console.log(getCurrentDateAndTime());
+
+// Question 22: Write a recursive function to calculate the factorial of a given number
+
+// function calculateFactorial(n){
+//     if(n<=1) return n;
+//     return n*calculateFactorial(n-1);
+// }
+
+// const finalVal = calculateFactorial(5);
+// console.log(finalVal);
+
+
+
+
+
 
 
 
