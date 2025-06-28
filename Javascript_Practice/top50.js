@@ -147,6 +147,205 @@
 // const finalVal = calculateFactorial(5);
 // console.log(finalVal);
 
+// Question 23: Recursive function to call fibonacci of the number
+
+// function calFibonacci(n){
+//     if(n<=1) return n;
+//     return calFibonacci(n-1) + calFibonacci(n-2);
+// }
+// const value1 = calFibonacci(8);
+// console.log(value1);
+
+// Question 24: Create a counter function using closures that increments and returns the count on each call.
+
+// function counter(){
+//     let count = 0;
+//     return function(){
+//         count++;
+//         console.log(count);
+//     }
+// }
+
+// var counter1 = counter();
+
+// counter1();
+// counter1();
+
+// var counter2 = counter();
+
+// counter2();
+// counter1();
+// counter2();
+
+
+// function counterClass(){
+//     let count = 0;
+//     this.increment = ()=> { 
+//         count++;
+//         console.log(count);
+//     }
+//     this.decrement = () => {
+//         count--;
+//         console.log(count);
+//     }
+//     return count;
+// }
+// var counterX = new counterClass(); // to use function as a constructor, initialize like this.
+// counterX.increment();
+// counterX.increment();
+// counterX.decrement();
+// counterX.decrement();
+
+// Question 25: Implement a private variable using closure.
+
+// In this, i have to return an object, which should access the private variable, means via methods, i should be able to updatea nd access the value of the variable.
+
+// function createCounter(){
+//     let count = 0;
+
+//     function increment(){
+//         count++;
+//         console.log(count);
+//     }
+
+//     return {
+//         incrementCounter: function(){
+//             increment();
+//         },
+//         getCount: function(){
+//             return count;
+//         }
+//     }    
+// }
+
+// let counter1 = createCounter();
+
+// counter1.incrementCounter();
+// const value =counter1.getCount();
+// console.log(value);
+// counter1.incrementCounter();
+
+// console.log(counter1.getCount());
+
+// Question 26: Create a prototype for a Product object with properties like name, price, and quantity. Add a method to the Product prototype to calculate the total value.
+
+// const Product = {};
+
+// Product.prototype.name = "Aaditya";
+// Product.prototype.price = 100;
+// Product.prototype.quantity = 999;
+
+// Product.prototype.total_Val = function(){
+//     return this.price * this.qunatity;
+// }
+
+// Product.prototype.details = {
+//     name: "Addy",
+//     price: 101,
+//     quantity: 19,
+//     total_val: function(){
+//         return this.price * this.quantity;
+//     }
+// }
+
+// Step 1 creating constructor functions
+
+// function Product(name, age, price){
+//     this.name = name;
+//     this.age = age;
+//     this.price = price;
+// }
+
+// Product.prototype.calculateTotalValue = function(){
+//     return this.price*this.age;
+// }
+// const product1 = new Product("Aaditya", 21, 100);
+// console.log(product1.calculateTotalValue());
+// console.log(`${product1.name} and and ${product1.age}`);
+
+
+// Question 27: Implement a try-catch block to handle an error that occurs during API data fetching
+
+// function fetchData(){
+//     try{
+//         fetch('https://dummyjson.com/test').then(res => res.json()).then(x => console.log(x));
+//     }
+//     catch(err){
+//         console.log(err);
+//     }
+// }
+
+// fetchData();
+
+// using async await.
+
+// async function fetchData(){
+//     try{
+//         const data = await fetch('https://dummyjson.com/test');
+//         const responseData = await data.json();
+//         console.log(responseData);
+//         return responseData;
+//     }
+//     catch(err){
+//         console.log("Error is happening here:", err);
+//     }
+// }
+// fetchData().then(val => console.log(val));
+
+// Question 28: Implement a function that makes multiple API calls and processes the data using callbacks
+
+// function makeAPICall(url, callback){
+
+//     fetch(url).then(data => {
+//         if (!data.ok) throw new Error(`HTTP error! status: ${data.status}`);
+//         return data.json()
+//     }
+//     ).then(resp => callback(resp))
+//     .catch(err => console.log('Error: err', err));
+// }
+
+// function handleData(data){
+//     console.log(data);
+// }
+
+// function main(){
+
+//     const apiUrl1 = 'https://dummyjson.com/producs/?limit=10&skip=5&select=key1,key2,key3';
+//     const apiUrl2 = 'https://dummyjson.com/test';
+
+//     makeAPICall(apiUrl1, handleData);
+//     makeAPICall(apiUrl2, handleData);
+// }
+
+// main();
+
+/* Note: try catch is not used in the fetch.then(), it is used in async await onl, for errro cacthing, we use .cacth() in the fetch.then() kinda stuff*/
+
+// Question 29: Implement the previous solution using Promised only.
+
+// function makeAPICall(url){
+//     return fetch(url).then(data => data.json());
+// }
+
+// function handleData(data){
+//     console.log(data);
+// }
+
+// function main(){
+//     const apiUrl1 = 'https://dummyjson.com/products/?limit=10&skip=5&select=key1,key2,key3';
+//     const apiUrl2 = 'https://dummyjson.com/test';
+//     makeAPICall(apiUrl1).then(data => handleData(data)).catch(err => console.log('Error occured:',err));
+//     makeAPICall(apiUrl2).then(data => handleData(data)).catch(err => console.log(err));
+// }
+// /* whichever promise resolve first, it will be get printed, here in the above case, apiUrl2 promise is resolving first, so it will get the printed first only */
+// main();
+
+// Question 30: Use Promises to load multiple images asynchornously and display them as a webpage.
+
+
+
+
+
 
 
 
