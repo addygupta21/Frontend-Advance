@@ -343,6 +343,127 @@
 // Question 30: Use Promises to load multiple images asynchornously and display them as a webpage.
 
 
+{/* <div id = "imageContainer"> </div> */}
+
+// function loadImage(url){
+//     return new Promise((res,rej) =>{
+//         let img = new Image();
+//         img.onload = function(){
+//             res(img);
+//         }
+//         img.onerror = function(){
+//             rej(new Error("Failed to load: " + src));
+//         }
+//         img.src = src;
+//     })
+// }
+
+// let imageUrls = ["./image/1.jpeg", "./image/2.jpeg", "./image/3.jpeg"];
+
+// let imageContainer = document.getElementById("imageContainer");
+
+// Promise.all(imageUrls.map(loadImage)).then(image => {
+//     image.forEach(img => imageContainer.appendChild(img));
+// }).catch(err => console.log(err));
+
+// Question 31: Load Images using async await
+
+// async function loadImage(src){
+//     return new Promise((res,rej) => {
+//         let img = new Image();
+//         img.onload = function(){
+//             res(img);
+//         }
+//         img.onerror = function(){
+//             rej(new Error("Failed to load: " + src));
+//         }
+//         img.src = src;
+//     })
+// }
+
+// async function loadImages(){
+//     let imageUrls = ["./image/1.jpeg", "./image/2.jpeg", "./image/3.jpeg"];
+//     let imageContainer = document.getElementById("imageContainer");
+//     try{ 
+//         const images = await Promise.all(imageUrls.map(loadImage));
+//         images.map(img => imageContainer.appendChild(img));
+//     }catch{
+//         err => console.log(err)
+//     };
+// }
+
+// Question 32: Fetch data from an API using async/await
+
+// async function fetchData(url){
+//     try{
+//         let response = await fetch(url);
+//         let data = await response.json();
+//         if(!data.ok){
+//             throw new Error ("request loading failed" + response.status);
+//         }
+//         return data;
+//     }
+//     catch(err){
+//         console.log(err);
+//     }
+// }
+
+// fetchData('dummy-url').then(data => console.log(data));
+// Question 33: Build a basic image gallery using useReducer to allow users to navigate between images and display the current image
+
+/* It's a react question */
+
+// Question 34: Implement a form vavlidation function that checks if all required fields are filled out.
+
+{/* <body>
+<div>
+    lorem50
+</div>
+</body>
+
+let parent = document.querySelector("body");
+let child = document.querySelector("div");
+
+parent.addEventListener("click", () =>{
+    console.log('fnjvr');
+}, true); // true -. event capturing, from top to the bottom.
+
+child.addEventListener("click", () => {
+    console.log('f nhjn fouej');
+}, false); // false or default -> event bubbling, from bottom to the top */}
+
+// to avoid this, we use e.stopPropogation();
+
+// Question 36: Write the JS code to implement the quote-changing feature
+
+
+{/* <h1>  Motivational Quote </h1>
+<div id = "quotes"> Quotes... </div> */}
+
+// script tag
+
+// const qouteToBeChanged = document.getElementById("quotes");
+// const quotesArray = ["q1", "q2", "q3", "q4", "q5"];
+
+// function changeQuote(){
+//     const rIndex = Math.floor(Math.random() * quotesArray.length);
+//     qouteToBeChanged.textContent = quotesArray[index];
+// }
+// function toChangeQuote(){
+//     // let number = Math.floor(Math.random() * 60)*100;
+//     setTimeout(() => {
+//         toChangeQuote();
+//     }, 1000);
+// }
+
+// toChangeOuote();
+
+// Question 37: Write a regular expression to validate an email address
+
+// Revise the regrex function, nothing else
+
+// QUestion 38: 2D Arrays
+
 
 
 
