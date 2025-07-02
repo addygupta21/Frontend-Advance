@@ -65,3 +65,27 @@ const ImageUploader = () => {
 };
 
 export default ImageUploader;
+
+
+// function a() {
+//   for (let i = 0; i < 3; i++) {
+//     (function(val_i){
+//     setTimeout(function log() {
+//       console.log(val_i); // 0, then 1, then 2
+//     }, val_i * 1000);
+//   }
+// )(i);
+//   }
+// }
+
+
+// const testObject = {
+//     name: "Aaditya",
+//     fun: function(){
+//         console.log("My name is:" + this.name);
+//     }
+// }
+
+// const contextChange = {name: "Gupta"};
+
+// testObject.fun.call(contextChange);
