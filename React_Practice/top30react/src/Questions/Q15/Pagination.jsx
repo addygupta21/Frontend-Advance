@@ -7,9 +7,6 @@ const Pagination = ({itemsPerPage}) =>{
     const endIndex = startIndex + itemsPerPage;
     const totalPages = (itemArray.length)/(itemsPerPage);
     const displayItems = itemArray.slice(startIndex, endIndex);
-
-
-
     
     return (
         <>
