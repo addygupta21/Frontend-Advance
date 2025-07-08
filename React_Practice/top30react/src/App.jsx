@@ -10,13 +10,16 @@ import Form from './Questions/Q3/Form'
 // import BgChange from './Questions/Q8/BgChange'
 // import Route from './Questions/Q9/Route'
 // import RandomQuote from './Questions/Q10/RandomQuote'
-import ImageUploader from './Questions/Q11/ImageUpload'
-import WeatherApp from './Questions/Q13/WeatherApp'
+// import ImageUploader from './Questions/Q11/ImageUpload'
+// import WeatherApp from './Questions/Q13/WeatherApp'
+
+// import SearchBar from './Questions/Q14/SearchBar'
+import Pagination from './Questions/Q15/Pagination'
 
 function App() {
   return (
     <>
-      <WeatherApp/>
+      <Pagination itemsPerPage={10}/>
     </>
   )
 }
