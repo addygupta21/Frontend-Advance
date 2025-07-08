@@ -14,12 +14,13 @@ import Form from './Questions/Q3/Form'
 // import WeatherApp from './Questions/Q13/WeatherApp'
 
 // import SearchBar from './Questions/Q14/SearchBar'
-import Pagination from './Questions/Q15/Pagination'
+// import Pagination from './Questions/Q15/Pagination'
+import Counter from './Questions/Q20/Counter'
 
 function App() {
   return (
     <>
-      <Pagination itemsPerPage={10}/>
+      <Counter/>
     </>
   )
 }
