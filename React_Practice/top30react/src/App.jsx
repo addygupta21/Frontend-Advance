@@ -11,11 +11,12 @@ import Form from './Questions/Q3/Form'
 // import Route from './Questions/Q9/Route'
 // import RandomQuote from './Questions/Q10/RandomQuote'
 import ImageUploader from './Questions/Q11/ImageUpload'
+import WeatherApp from './Questions/Q13/WeatherApp'
 
 function App() {
   return (
     <>
-      <ImageUploader/>
+      <WeatherApp/>
     </>
   )
 }
